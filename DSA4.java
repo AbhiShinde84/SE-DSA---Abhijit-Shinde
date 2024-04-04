@@ -1,33 +1,28 @@
-import java.util.Scanner ;
 
-public class DSA4 
-{
-    static class Node 
-    {
+import java.util.Scanner;
+class ExpressionsTree{
+    static class Node {
         char data;
-        Node left ,right;
+        Node left, right;
 
-        Node(char ele)
-        {
-            data  = ele;
-            left  = null;
-            right = null;
+        Node(char item) {
+            data = item;
+            left = right = null;
         }
     }
 
     Node root;
-    DSA4(){
-        root=null;
+
+    ExpressionsTree() {
+        root = null;    
     }
 
-    void insert(String expression)
-    {
+    void insert(String expression) {
         char[] charArray = expression.toCharArray();
         root = insertNode(charArray, root, 0);
-        
     }
-    Node insertNode(char[] expression , Node root , int i){
 
+    Node insertNode(char[] expression, Node root, int i) {
         if (i < expression.length) {
             Node temp = new Node(expression[i]);
             root = temp;
@@ -39,6 +34,7 @@ public class DSA4
         }
         return root;
     }
+
     boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/' || c == '(' || c == ')';
     }
@@ -127,8 +123,8 @@ public class DSA4
         do {
             System.out.println("\nMenu:");
             System.out.println("1. Insert Expression");
-            System.out.println("2. Show Postorder Traversal");
-            System.out.println("3. Delete a Node");
+            System.out.println("2. Delete a Node");
+            System.out.println("3. Show Postorder Traversal");
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
@@ -140,11 +136,6 @@ public class DSA4
                     tree.insert(expression);
                     break;
                 case 2:
-                    System.out.println("Postorder Traversal:");
-                    tree.showPostOrder(tree.root);
-                    break;
-                    
-                case 3:
                     if (tree.root != null) {
                         System.out.print("Enter the node to delete: ");
                         key = scanner.next().charAt(0);
@@ -155,6 +146,10 @@ public class DSA4
                         System.out.println("Expression tree is empty!");
                     }
                     break;
+                case 3:
+                    System.out.println("Postorder Traversal:");
+                    tree.showPostOrder(tree.root);
+                    break;
                 case 4:
                     System.out.println("Exiting...");
                     break;
@@ -162,9 +157,5 @@ public class DSA4
                     System.out.println("Invalid choice! Please enter a valid option.");
             }
         } while (choice != 4);
-
-    
-    scanner.close();
     }
-
 }
