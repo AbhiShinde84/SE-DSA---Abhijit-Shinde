@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-class ExpressionsTree{
+class DSA4{
     static class Node {
         char data;
         Node left, right;
@@ -13,7 +13,7 @@ class ExpressionsTree{
 
     Node root;
 
-    ExpressionsTree() {
+    DSA4() {
         root = null;    
     }
 
@@ -116,7 +116,7 @@ class ExpressionsTree{
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ExpressionsTree tree = new ExpressionsTree();
+        DSA411 tree = new DSA411();
 
         int choice;
         char key;
