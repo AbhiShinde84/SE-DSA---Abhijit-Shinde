@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class 
+class Dsa1
 {
 
     // Linear Probing
