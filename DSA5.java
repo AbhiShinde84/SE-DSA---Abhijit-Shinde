@@ -13,10 +13,10 @@ class Threaded {
     }
 }
 
-public class ThreadedBinaryTree {
+public class DSA5 {
     Threaded root;
 
-    ThreadedBinaryTree() {
+    DSA5() {
         root = null;
     }
 
