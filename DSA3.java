@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 
 class DSA3
@@ -15,8 +16,8 @@ class DSA3
            System.out.println("  +---------------------------------------------------------+  ");
            System.out.println("  |  1)  Create A Binary Search Tree.                       |  ");
            System.out.println("  |  2)  Insert A Element Inside A BST.                     |  ");
-           System.out.println("  |  3)  Search For An Element Inside A BST.                |  ");
-           System.out.println("  |  4)  Display Tree Nodes (Inorder Traversal).            |  ");
+           System.out.println("  |  3)  Display Tree Nodes (Inorder Traversal).            |  ");
+           System.out.println("  |  4)  Search For An Element Inside A BST.                |  ");
            System.out.println("  |  5)  Total Number Of Nodes In Tree.                     |  ");
            System.out.println("  |  6)  Exit.                                              |  ");
            System.out.println("  +---------------------------------------------------------+  ");
@@ -38,26 +39,26 @@ class DSA3
                        t1.insert_node(t1.root,ele);
                        break;
                    }
-               case 3 :
-                   {
-                       t1.cnt = 0;
-                       System.out.println("Enter The Element To Search In A Tree : ");
-                       int ele = read.nextInt();
-                       t1.search(ele);
-                       break;
-                   }
-               case 4 :
+                   case 3 :
                    {
                        t1.array_of_nodes = new int[t1.total_nodes];
                        t1.cnt = 0;
                        t1.inorder(t1.root);
-
+                       
                        for (int i = 0; i < t1.total_nodes; i++)
                        {
                            System.out.println(t1.array_of_nodes[i]);
-                       }                        
-                       break;
-                   }
+                        }                        
+                        break;
+                    }
+                case 4 :
+                    {
+                        t1.cnt = 0;
+                        System.out.println("Enter The Element To Search In A Tree : ");
+                        int ele = read.nextInt();
+                        t1.search(ele);
+                        break;
+                    }
                case 5 : 
                    {
                        System.out.println("Total Number Of Nodes In a Tree Are : ");
